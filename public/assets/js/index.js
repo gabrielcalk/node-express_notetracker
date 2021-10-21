@@ -40,7 +40,7 @@ const getNotes = () =>
   })
   .then((res) => res.json())
   .then((data) => {
-      console.log('Successful POST request:', data);
+      console.log('Successful GET request:', data);
 
       return data;
     })
@@ -53,6 +53,15 @@ function saveNote(note) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
+  })
+  .then((res) => res.json())
+  .then((data) => {
+    console.log('Successful POST request:', data);
+  
+  return data
+  })
+  .catch((error) => {
+    console.log(`Error on post request ${error}`)
   });
 }
 
