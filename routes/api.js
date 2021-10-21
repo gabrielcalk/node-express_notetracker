@@ -6,6 +6,7 @@ const routerApi = express.Router();
 
 const uuid = require('../helpers/uuid.js');
 const notes = require('../db/db.json');
+const e = require('express');
 const readFromFile = util.promisify(fs.readFile);
 
 routerApi.get('/notes', (req, res) =>{
@@ -27,7 +28,7 @@ routerApi.post('/notes', (req, res) =>{
             if (err){
                 console.error(err)
             } else {
-                const parseData = JSON.parse(data);
+                let parseData = JSON.parse(data);
 
                 parseData.push(Newinputs)
 
@@ -47,10 +48,23 @@ routerApi.post('/notes', (req, res) =>{
 routerApi.delete('/notes/:id', (req, res) =>{
 // from :https://www.tabnine.com/code/javascript/functions/express/Express/delete
     const { id } = req.params;
+    console.log(id)
 
-    var removeIndex = notes.map(function(item) { return item.id; }).indexOf(id);
-   
-    notes.splice(removeIndex, 1)
+    fs.readFile('./db/db.json', 'utf8', (err, data) =>{
+        if (err){
+            console.error(err)
+        } else {
+            let parseData = JSON.parse(data);
+            console.log(parseData)
+
+            let index_text = parseData.findIndex(p => p.id == id);
+            console.log(index_text)
+
+            parseData.splice(index_text, 1)
+
+            fs.writeFile('./db/db.json', JSON.stringify(parseData), (err) => err ? console.info(err) : console.info('sucess'))
+        }
+    })
 })
 
 // routerApi

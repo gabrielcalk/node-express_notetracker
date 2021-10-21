@@ -71,6 +71,15 @@ const deleteNote = (id) =>
       'Content-Type': 'application/json',
     },
   })
+  .then((data) => data.json())
+  .then((data) => {
+    console.log('Successful POST request:', data);
+  
+  return data
+  })
+  .catch((error) => {
+    console.log(`Error on post request ${error}`)
+  });
 
 
 const renderActiveNote = () => {
