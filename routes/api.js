@@ -1,13 +1,15 @@
 const express = require('express');
 const fs = require('fs');
+const util = require('util')
 
 const routerApi = express.Router();
 
 const uuid = require('../helpers/uuid.js');
 const notes = require('../db/db.json');
+const readFromFile = util.promisify(fs.readFile);
 
 routerApi.get('/notes', (req, res) =>{
-    res.status(200).json(notes);
+    readFromFile('./db/db.json', 'utf-8').then((data) => res.json(JSON.parse(data)));
 });
 
 routerApi.post('/notes', (req, res) =>{
@@ -42,8 +44,13 @@ routerApi.post('/notes', (req, res) =>{
     }
 })
 
-routerApi.delete('/notes', (req, res) =>{
+routerApi.delete('/notes/:id', (req, res) =>{
+// from :https://www.tabnine.com/code/javascript/functions/express/Express/delete
+    const { id } = req.params;
 
+    var removeIndex = notes.map(function(item) { return item.id; }).indexOf(id);
+   
+    notes.splice(removeIndex, 1)
 })
 
 // routerApi

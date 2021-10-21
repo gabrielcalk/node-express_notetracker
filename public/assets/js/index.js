@@ -41,8 +41,7 @@ const getNotes = () =>
   .then((res) => res.json())
   .then((data) => {
       console.log('Successful GET request:', data);
-
-      return data;
+      return data
     })
 
 // posting one note that the user wrote
@@ -71,7 +70,8 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  })
+
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
