@@ -7,12 +7,13 @@ let noteList;
 console.log(window.location.pathname === '/notes')
 // if the location match with /notes, then get elements from the html
 if (window.location.pathname === '/notes') {
-  noteTitle = document.querySelector('#note-title');
-  noteText = document.querySelector('#note-textarea');
+  noteTitle = document.getElementById('note-title');
+  noteText = document.getElementById('note-textarea');
   saveNoteBtn = document.getElementById('save-note');
   newNoteBtn = document.querySelector('#new-note');
   noteList = document.querySelectorAll('#list_note');
 }
+
 
 // Show an element
 const show = (elem) => {
