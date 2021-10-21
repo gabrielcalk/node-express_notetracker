@@ -20,13 +20,13 @@
   </head>
 
   <body>
-    <section class="border w-75 m-auto mt-5">
+    <section id="box_note" class="border border-dark w-75 m-auto mt-5">
       <section class="bg-success d-flex justify-content-between p-3 border-bottom">
         <div>
-          <a class="text-decoration-none fs-6 text-light" href="/">Note Taker </a>
+          <a class="text-decoration-none fs-5 text-light" href="/">Note Taker </a>
         </div>
         <div class="icons">
-          <i class="fas fa-save text-light save-note"></i>
+          <i class="fas fa-save text-light save-note mr-4"></i>
           <i class="fas fa-plus text-light new-note"></i>
         </div>
       </section>
@@ -38,16 +38,15 @@ the note and the inputs-->
 <!-- Note that have been added -->
             <div class="w-25 border">
               <div class="d-flex justify-content-around">
-                <ul class="list-unstyled w-100 text-center">
-                  <li class="border-bottom p-2">Testando</li>
-                  <li class="border-bottom p-2">Testando</li>
+                <ul id="list_note" class="list-unstyled w-100 text-center">
+                  <!-- <li class="border-bottom p-2 d-flex justify-content-around">Testando<img class="h-50 mt-1" alt="trash_can" src="/public/assets/images/iconmonstr-trash-can-1-16.png"></li> -->
                 </ul>
               </div>
             </div>
 <!-- inputs -->
             <div class="w-75">
-              <input class="col" placeholder="Note Title" maxlength="28" type="text"/>
-              <textarea class="col" placeholder="Note Text"></textarea>
+              <input class="col p-2 display-4 border-0" placeholder="Note Title" maxlength="28" type="text"/>
+              <textarea class="col border-0 mt-4" placeholder="Note Text"></textarea>
             </div>
         </section>
       </main>
