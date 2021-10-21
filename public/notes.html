@@ -23,11 +23,11 @@
     <section id="box_note" class="border border-dark w-75 m-auto mt-5">
       <section class="bg-success d-flex justify-content-between p-3 border-bottom">
         <div>
-          <a class="text-decoration-none fs-5 text-light" href="/">Note Taker </a>
+          <a id="note-title" class="text-decoration-none fs-5 text-light" href="/">Note Taker </a>
         </div>
         <div class="icons">
-          <i class="fas fa-save text-light save-note mr-4"></i>
-          <i class="fas fa-plus text-light new-note"></i>
+          <i id="save-note" class="fas fa-save text-light save-note mr-4"></i>
+          <i id="new-note" class="fas fa-plus text-light new-note"></i>
         </div>
       </section>
 
@@ -39,18 +39,17 @@ the note and the inputs-->
             <div class="w-25 border">
               <div class="d-flex justify-content-around">
                 <ul id="list_note" class="list-unstyled w-100 text-center">
-                  <!-- <li class="border-bottom p-2 d-flex justify-content-around">Testando<img class="h-50 mt-1" alt="trash_can" src="/public/assets/images/iconmonstr-trash-can-1-16.png"></li> -->
                 </ul>
               </div>
             </div>
 <!-- inputs -->
             <div class="w-75">
               <input class="col p-2 display-4 border-0" placeholder="Note Title" maxlength="28" type="text"/>
-              <textarea class="col border-0 mt-4" placeholder="Note Text"></textarea>
+              <textarea id="note-textarea" class="col border-0 mt-4" placeholder="Note Text"></textarea>
             </div>
         </section>
       </main>
     </section>
-    <script src="/assets/js/index.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

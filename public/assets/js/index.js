@@ -4,12 +4,14 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+console.log(window.location.pathname === '/notes')
+// if the location match with /notes, then get elements from the html
 if (window.location.pathname === '/notes') {
-  noteTitle = document.querySelector('.note-title');
-  noteText = document.querySelector('.note-textarea');
-  saveNoteBtn = document.querySelector('.save-note');
-  newNoteBtn = document.querySelector('.new-note');
-  noteList = document.querySelectorAll('.list-container .list-group');
+  noteTitle = document.querySelector('#note-title');
+  noteText = document.querySelector('#note-textarea');
+  saveNoteBtn = document.getElementById('save-note');
+  newNoteBtn = document.querySelector('#new-note');
+  noteList = document.querySelectorAll('#list_note');
 }
 
 // Show an element
@@ -25,6 +27,7 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+// going to /api/notes and getting the information
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -33,6 +36,7 @@ const getNotes = () =>
     },
   });
 
+// posting one note that the user wrote
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
