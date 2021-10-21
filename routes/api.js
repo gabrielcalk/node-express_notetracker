@@ -12,16 +12,16 @@ routerApi.get('/notes', (req, res) =>{
 routerApi.post('/notes', (req, res) =>{
  console.info(`${req.method} request revied`)
  console.info(req.body)
-//  const {text_title, text} = req.body;
+ const {text_title, text} = req.body;
 
-//  if(text_title && text){
-//      const inputs = {
-//          status: 'success',
-//          text_title,
-//          text
-//      }
-//      console.info(inputs)
-//  }
+ if(text_title && text){
+     const inputs = {
+         status: 'success',
+         text_title,
+         text
+     }
+     console.info(inputs)
+ }
 
 
 })

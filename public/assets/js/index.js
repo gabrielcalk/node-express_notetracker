@@ -4,7 +4,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-console.log(window.location.pathname === '/notes')
+
 // if the location match with /notes, then get elements from the html
 if (window.location.pathname === '/notes') {
   noteTitle = document.getElementById('note-title');
@@ -27,6 +27,8 @@ const hide = (elem) => {
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
+
+hide(saveNoteBtn)
 
 // going to /api/notes and getting the information
 const getNotes = () =>
@@ -130,7 +132,7 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  let jsonNotes = await notes.json();
+  let jsonNotes = await notes;
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
