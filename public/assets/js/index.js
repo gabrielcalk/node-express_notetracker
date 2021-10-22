@@ -10,7 +10,7 @@ if (window.location.pathname === '/notes') {
   noteTitle = document.getElementById('note-title');
   noteText = document.getElementById('note-textarea');
   saveNoteBtn = document.getElementById('save-note');
-  newNoteBtn = document.querySelector('#new-note');
+  newNoteBtn = document.getElementById('new-note');
   noteList = document.querySelectorAll('#list_note');
 }
 
@@ -99,8 +99,6 @@ const handleNoteSave = () => {
     getAndRenderNotes();
     renderActiveNote();
   });
-  noteText.value = ''
-  noteTitle.value = ''
 };
 
 // Delete the clicked note
