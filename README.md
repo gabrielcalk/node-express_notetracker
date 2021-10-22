@@ -6,7 +6,7 @@ MIT LICENSE cover this project.
 <img src='https://img.shields.io/badge/mit-badge-yellow'>
     
 
-# link: https://pacific-meadow-83708.herokuapp.com/ (deployed with HEROKU)
+## link: https://pacific-meadow-83708.herokuapp.com/ (deployed with HEROKU)
     
 
 ## *Table of Contents*
@@ -23,26 +23,33 @@ This is a project developed with the following technologies: HTML, CSS, BOOTSTRA
 
 
 
-
-
 ## *Technologies*
-'HTML'
-
+1. HTML
+2. CSS
+3. BOOTSTRAP
+4. JavaScript
+5. NODE.JS
+6. EXPRESS.JS
 
 
 ## *Authors*
 Gabriel Cavalcante Causin
 
 
-
 ## *Usage*
 
-Video Explaning How To Use: https://www.youtube.com/watch?v=w6VOcrJYfC4
+In this aplicattion you don't need to clone this repo to use the project, just follow the images below:
 
-![image](https://user-images.githubusercontent.com/89816900/137827031-058932e3-f8af-4595-97c2-9907b4f737d6.png)
-![image](https://user-images.githubusercontent.com/89816900/137827086-b46e2bee-75e9-4d20-afab-c7cb3d2dee9d.png)
-![image](https://user-images.githubusercontent.com/89816900/137827101-72822012-73bd-4630-8900-9e9f94873e64.png)
+- Step 1:
+![image](https://user-images.githubusercontent.com/89816900/138385287-ebe7989f-bbeb-47fc-b262-9c0e7ab4d3bd.png)
 
+- Step 2:
+![image](https://user-images.githubusercontent.com/89816900/138385348-c3971dec-47e3-48b1-8e14-0b098f1d4e68.png)
+
+You can delete one note by clicking on the trash icon on the right of the text.
+
+If you wanna check the comments that you add on one note, just click on that note:
+![image](https://user-images.githubusercontent.com/89816900/138385544-071ff26d-a991-4131-ac6a-af64e2c47baf.png)
 
 
 ## *Questions*
