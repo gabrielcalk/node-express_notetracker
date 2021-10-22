@@ -49,6 +49,7 @@ In this aplicattion you don't need to clone this repo to use the project, just f
 You can delete one note by clicking on the trash icon on the right of the text.
 
 If you wanna check the comments that you add on one note, just click on that note:
+
 ![image](https://user-images.githubusercontent.com/89816900/138385544-071ff26d-a991-4131-ac6a-af64e2c47baf.png)
 
 
