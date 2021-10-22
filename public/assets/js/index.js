@@ -64,23 +64,15 @@ function saveNote(note) {
   });
 }
 
-const deleteNote = (id) =>
+const deleteNote = (id) => 
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
   })
-  .then((data) => data.json())
-  .then((data) => {
-    console.log('Successful POST request:', data);
-  
-  return data
-  })
-  .catch((error) => {
-    console.log(`Error on post request ${error}`)
-  });
 
+  
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -107,6 +99,8 @@ const handleNoteSave = () => {
     getAndRenderNotes();
     renderActiveNote();
   });
+  noteText.value = ''
+  noteTitle.value = ''
 };
 
 // Delete the clicked note
@@ -122,6 +116,7 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(noteId).then(() => {
+
     getAndRenderNotes();
     renderActiveNote();
   });
