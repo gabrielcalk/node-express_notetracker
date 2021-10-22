@@ -26,7 +26,7 @@ This is a project developed with the following technologies: HTML, CSS, BOOTSTRA
 
 
 ## *Technologies*
-/HTML/
+'HTML'
 
 
 
